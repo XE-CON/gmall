@@ -12,10 +12,10 @@
     别人依赖核心包一定要将他放在最前面，可能与项目的其他jar版本冲突，按照先声明者优先就会用到我们核心包里面的jar，比如swagger引的guava-->
 
     <properties>
-        <mybatisplus.version>3.0.7.1</mybatisplus.version>
+        <mybatisplus.version>3.2.0</mybatisplus.version>
         <nacos.version>0.2.2.RELEASE</nacos.version>
-        <mybatisplus.version>3.0.7.1</mybatisplus.version>
-        <mysql.version>5.1.46</mysql.version>
+        <mybatisplus.version>3.3.1</mybatisplus.version>
+        <mysql.version>8.0.19</mysql.version>
         <swagger.version>2.9.2</swagger.version>
     </properties>
 
