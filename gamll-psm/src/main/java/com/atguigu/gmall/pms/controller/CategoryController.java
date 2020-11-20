@@ -1,12 +1,10 @@
 package com.atguigu.gmall.pms.controller;
 
-import java.util.Arrays;
-import java.util.List;
-
-
 import com.atguigu.core.bean.PageVo;
 import com.atguigu.core.bean.QueryCondition;
 import com.atguigu.core.bean.Resp;
+import com.atguigu.gmall.pms.entity.CategoryEntity;
+import com.atguigu.gmall.pms.service.CategoryService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -14,8 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import com.atguigu.gmall.pms.entity.CategoryEntity;
-import com.atguigu.gmall.pms.service.CategoryService;
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
@@ -29,6 +27,7 @@ import com.atguigu.gmall.pms.service.CategoryService;
 @RestController
 @RequestMapping("pms/category")
 public class CategoryController {
+
     @Autowired
     private CategoryService categoryService;
 
@@ -38,7 +37,7 @@ public class CategoryController {
         QueryWrapper<CategoryEntity> wrapper = new QueryWrapper<>();
         //判断分类的级别是否为0
         if(level!=0){
-            wrapper.eq("",level);
+            wrapper.eq("cat_level",level);
         }
         //判断父节点的id是否为空
         if (pid!=null){

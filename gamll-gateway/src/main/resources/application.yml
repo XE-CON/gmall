@@ -8,7 +8,7 @@ spring:
           uri: lb://pms-service
           predicates:
             - Path=/pms/**
-        - id: pms-route
+        - id: sms-route
           uri: lb://sms-service
           predicates:
             - Path=/sms/**
@@ -23,4 +23,6 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+  application:
+    name: gmall-gateway
 

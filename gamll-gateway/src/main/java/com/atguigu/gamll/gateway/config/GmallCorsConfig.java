@@ -20,7 +20,7 @@ public class GmallCorsConfig {
         //配置源对象
         UrlBasedCorsConfigurationSource configurationSource = new UrlBasedCorsConfigurationSource();
         configurationSource.registerCorsConfiguration("/**", configuration);
-        //cors过滤对象
+        //cors过滤器对象
         return new CorsWebFilter(configurationSource);
     }
 }
